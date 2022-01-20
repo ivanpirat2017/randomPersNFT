@@ -14,7 +14,7 @@ width = 1000
 
 
 
-def gendomarr(arr):
+def gendoArr(arr):
     newArr = []
     for item in arr:
         newArr.append(int(re.findall(r'#(\d+).', item)[0]))  
@@ -27,7 +27,7 @@ num =0
 arrPers = []
 def getImgRandom(getpath):
     body = './img/'+getpath+'/'
-    filePath =  gendomarr(os.listdir(body))  
+    filePath =  gendoArr(os.listdir(body))  
     img = Image.open( open(os.path.join(body,filePath  )).name)
     arr = [img, getpath+filePath]
     return arr
